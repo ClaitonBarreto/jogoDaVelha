@@ -1,0 +1,45 @@
+body {
+	background-color: grey;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#tabuleiro {
+	position: relative;
+	width: 180px;
+	height: 200px;
+	display: inline-flex;
+}
+
+#info-jogo {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+.coluna {
+	width: 100%;
+	height: 250px;
+}
+
+.casa {
+	margin: 5px;
+	border-radius: 5px;
+	display: inline-flex;
+	position: relative;
+	width: 60px;
+	height: 30%;
+	border: 0.5px dotted black;
+	background-color: white;
+	font-size: 45pt;
+	text-align: justify;
+}
+
+.green {
+	background-color: green;
+}
+
+.red {
+	background-color: red;
+}
