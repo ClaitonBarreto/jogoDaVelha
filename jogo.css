@@ -1,5 +1,5 @@
 body {
-	background-color: grey;
+	background-color: rgb(56,120,170);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -16,6 +16,10 @@ body {
 	position: absolute;
 	top: 0px;
 	left: 0px;
+}
+
+.info-player {
+	color: white
 }
 
 .coluna {
