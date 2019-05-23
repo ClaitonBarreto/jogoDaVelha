@@ -6,62 +6,64 @@
 </head>
 <body>
 
-	<div id="info-jogo">
-		
-		<span class="info-player">Proximo Jogador: </span> <br><br>
+	<div id="game">
 
-		<span>Score do Player 1: <span class="score-player1"></span> </span> <br/>
-		<span>Score do Player 2: <span class="score-player2"></span></span>
 
-		<div>
-			<button class="btn-restart-game">Reiniciar Jogo</button>
+		<h2 id="titulo">Jogo da Velha</h2>
+
+		<div id="info-jogo">
+			
+			<table class="table">
+				<tr>
+					<td>
+						Player1 <br/>
+						<span class="point">0</span>
+					</td>
+					<td>
+						Player2 <br/>
+						<span class="point">0</span>
+					</td>
+				</tr>
+			</table>
+
 		</div>
+
+		<div id="tabuleiro" cellspacing="10" cellpadding="20">
+			
+				<table id="tabuleiro">
+						<tr class="linha">
+							<td class="casa" id="linha-1_casa-1"></td>
+							<td class="casa" id="linha-1_casa-2"></td>
+							<td class="casa" id="linha-1_casa-3"></td>
+						</tr>
+						<tr class="linha">
+							<td class="casa" id="linha-2_casa-1"></td>
+							<td class="casa" id="linha-2_casa-2"></td>
+							<td class="casa" id="linha-2_casa-3"></td>
+						</tr>
+						<tr class="linha">
+							<td class="casa" id="linha-3_casa-1"></td>
+							<td class="casa" id="linha-3_casa-2"></td>
+							<td class="casa" id="linha-3_casa-3"></td>
+						</tr>
+					</table>
+
+		</div>
+
+		
+		<div id="resultado-da-rodada">
+
+			Fim da rodada! Vitoria de <span id="nome-do-jogador"></span>
+
+		</div> 
 
 	</div>
 
-	<div id="tabuleiro">
-		
-		<div class="coluna">
-			<div class="casa" id="coluna-1_casa-1">
-				<span></span>
-			</div>
-			<div class="casa" id="coluna-1_casa-2">
-				<span></span>
-			</div>
-			<div class="casa" id="coluna-1_casa-3">
-				<span></span>
-			</div>
-		</div>
-		<div class="coluna">
-			<div class="casa" id="coluna-2_casa-1">
-				<span></span>
-			</div>
-			<div class="casa" id="coluna-2_casa-2">
-				<span></span>
-			</div>
-			<div class="casa" id="coluna-2_casa-3">
-				<span></span>
-			</div>
-		</div>
-		<div class="coluna">
-			<div class="casa" id="coluna-3_casa-1">
-				<span></span>
-			</div>
-			<div class="casa" id="coluna-3_casa-2">
-				<span></span>
-			</div>
-			<div class="casa" id="coluna-3_casa-3">
-				<span></span>
-			</div>
-		</div>
-
-	</div>
-
-	<script src="src/saveScore.js"></script>
+	<!--<script src="src/saveScore.js"></script>
 	<script src="src/restartScore.js"></script>
 	<script src="src/verificator.js"></script>
 	<script src="src/objPlayers.js"></script>
-	<script type="text/javascript" src="./src/jogo.js"></script>
+	<script type="text/javascript" src="./src/jogo.js"></script>-->
 
 </body>
 </html>

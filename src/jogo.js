@@ -73,24 +73,6 @@ function verifica(possibilities) {
 	verificaEmpate()
 }
 
-
-function roundVerificator(val1, val2, val3) {
-	if(casas[val1].innerText == casas[val2].innerText 
-		&& casas[val1].innerText == casas[val3].innerText 
-		&& casas[val1].innerText != '') 
-	{
-		casas[val1].classList.add('green')
-		casas[val2].classList.add('green')
-		casas[val3].classList.add('green')
-		anuncio('Fim de partida! Vitoria do Jogador ' + player.getNome())
-		saveScore(player.name)
-		player = {value: ''}
-		casas.forEach((casa) => {
-			casa.addEventListener('click', (e) => { return false })
-		})
-	}
-}
-
 function verificaEmpate(){
 	if(jogadas >= 9) {
 		anuncio('Jogo Empatado!')

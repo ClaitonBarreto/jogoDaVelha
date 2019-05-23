@@ -1,43 +1,64 @@
 body {
 	background-color: rgb(56,120,170);
-	display: flex;
-	justify-content: center;
-	align-items: center;
+}
+
+#game {
+	width: 800px;
+	margin: 0 auto;
+	height: auto;
+	border: 1px solid blue
+}
+
+#titulo {
+	border: 1px solid darkgoldenrod;
+	position: relative;
+	text-align: center;
+	width: 250px;
+	margin: 0 auto
 }
 
 #tabuleiro {
-	position: relative;
-	width: 180px;
-	height: 200px;
-	display: inline-flex;
+	padding: 15px;
+	width: 400px;
+	height: 400px;
+	margin: 0 auto;
+	border: 1px solid red
 }
 
 #info-jogo {
-	position: absolute;
-	top: 0px;
-	left: 0px;
+	width: 500px;
+	margin: 0 auto;
+	border: 1px solid green
+}
+
+#resultado-do-jogo {
+	position: relative;
+	border: 1px solid black
+
 }
 
 .info-player {
 	color: white
 }
 
-.coluna {
-	width: 100%;
-	height: 250px;
-}
-
 .casa {
 	margin: 5px;
-	border-radius: 5px;
-	display: inline-flex;
-	position: relative;
+	border-radius: 10px;
+	height: 60px;
 	width: 60px;
-	height: 30%;
-	border: 0.5px dotted black;
+	border: 0.5px solid black;
 	background-color: white;
 	font-size: 45pt;
-	text-align: justify;
+	text-align: center;
+}
+
+.table {
+	width: 100%;
+	text-align: center;
+}
+
+.table .point {
+	font-size: 25pt
 }
 
 .green {
