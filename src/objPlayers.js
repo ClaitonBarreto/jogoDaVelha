@@ -1,30 +1,31 @@
-var Player = function(name, value, field){
-    name = name
-    score = getScore(this.name)
-    value = value
-    objScore = document.querySelector(field),
-    
-    this.getNome = function(){ 
-        return name
+var Player = {
+        _name : undefined,
+        _score : undefined,
+        _value : undefined,
+
+        getValue: function(){
+            return this._value
+        },
+
+        getName: function(){
+            return this._value._name
+        },
+
+        getScore: function(){
+            return this._score
+        },
+
+        setName: function(val){
+            this._name = val
+        },
+
+        setScore: function(val){
+            this._score = val
+        },
+
+        setValue: function(val){
+            this._value = val
+        }
+
     }
 
-    this.getValue = function(){
-        return value
-    }
-
-    this.register = function(){
-        sessionStorage.setItem(this.name, 0)
-    },
-
-    this.validate = function(){
-        if(sessionStorage.getItem(this.name)) return true
-        return false
-    }
-
-    function alernate(currentPlayer, player1, player2) {
-        if(currentPlayer === player1)
-            currentPlayer = player2
-        else
-            currentPlayer = player1
-    }
-}

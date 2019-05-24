@@ -18,17 +18,18 @@
 
 // ALL VARIABLE GAME DECLARATIONS
 const 
-casas = document.querySelectorAll('.casa'),
-player1 = new Player(prompt('Defina o nome do Jogador1'), "C", '.score-player1'),
-player2 = new Player(prompt('Defina o nome do Jogador2'), "X", '.score-player2');
+casas = document.querySelectorAll('.casa');
+
+var
+player1 = Object.create(Player),
+player2 = Object.create(Player)
 
 let 
-player = player1,
-info_player = document.querySelector('.info-player'),
+player = player1;
 jogadas = 0;
 
-function verificaPlayer() {
-	info_player.innerHTML = 'Proximo Jogador: ' + player.getNome()
+function verificaPlayer() 
+{
 	if(player == player1) {
 		player = player2
 	}
@@ -37,11 +38,10 @@ function verificaPlayer() {
 	}
 }
 
-function game(casa) {
+function game(casa)
+{
 	 
-	if(casa.innerText == 'O' || casa.innerText == 'X'){
-		return
-	}
+	if(casa.innerText == player1.getValue() || casa.innerText == player2.getValue()) return
 
 	verificaPlayer()
 
@@ -50,8 +50,10 @@ function game(casa) {
 	joga(casa)
 }
 
-function joga(casa) {
-	if(casa.innerText == '') {
+function joga(casa) 
+{
+	if(casa.innerText == '') 
+	{
 		casa.innerHTML = player.getValue()
 	}
 	
@@ -68,36 +70,46 @@ function joga(casa) {
 	verifica(possibilities)
 }
 
-function verifica(possibilities) {
+function verifica(possibilities)
+{
 	possibilities.forEach((pos) => { roundVerificator(pos[0], pos[1], pos[2]) })
-	verificaEmpate()
 }
 
-function verificaEmpate(){
-	if(jogadas >= 9) {
-		anuncio('Jogo Empatado!')
+
+function defineValues()
+{
+	player1.setName(prompt('Defina o nome do Jogador 1'))
+	player1.setValue(prompt('Defina a figura com que joga o Jogador 1'))
+	player.setScore(0)
+	player2.setName(prompt('Defina o nome do Jogador 2'))
+	player2.setValue(prompt('Defina a figura com que joga o Jogador 2'))
+	player2.setScore(0)
+}
+
+
+function main()
+{
+	
+	if(sessionStorage.getItem('player1') == undefined)
+	{
+		defineValues()
+		json_player1 = JSON.stringify(player1)
+		json_player2 = JSON.stringify(player2)
+		sessionStorage.setItem('player1', json_player1)
+		sessionStorage.setItem('player2', json_player2)
+	} else {
+		player1 = JSON.parse(sessionStorage.getItem('player1'))
+		player2 = JSON.parse(sessionStorage.getItem('player2'))
 	}
-}	
 
-function anuncio(text){
-	alert(text)
-	window.setTimeout(function(){location.reload()}, 1000)
-}
-
-
-function main() {
-
-	casas.forEach(function(casa) {
-		casa.addEventListener('click', function(e) {
+	casas.forEach(function(casa) 
+	{
+		casa.addEventListener('click', function(e)
+		{
 			game(casa)
 			return true
 		})
 	})
-
-	sessionStorage.setItem(player1.getNome(), 0)
-	sessionStorage.setItem(player2.getNome(), 0)
-
 }
-
 main()
 

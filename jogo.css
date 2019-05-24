@@ -6,11 +6,9 @@ body {
 	width: 800px;
 	margin: 0 auto;
 	height: auto;
-	border: 1px solid blue
 }
 
 #titulo {
-	border: 1px solid darkgoldenrod;
 	position: relative;
 	text-align: center;
 	width: 250px;
@@ -22,19 +20,19 @@ body {
 	width: 400px;
 	height: 400px;
 	margin: 0 auto;
-	border: 1px solid red
 }
 
 #info-jogo {
 	width: 500px;
 	margin: 0 auto;
-	border: 1px solid green
 }
 
-#resultado-do-jogo {
+#resultado-da-rodada{
 	position: relative;
-	border: 1px solid black
-
+	width: 400px;
+	text-align: center;
+	margin: 0 auto;
+	display: none
 }
 
 .info-player {
@@ -50,6 +48,7 @@ body {
 	background-color: white;
 	font-size: 45pt;
 	text-align: center;
+	padding: 10px;
 }
 
 .table {
