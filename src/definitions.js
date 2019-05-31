@@ -40,4 +40,6 @@ function defineValues()
 		player2 = JSON.parse(sessionStorage.getItem('player2'))
 		session = 'player1'
 	}
+
+	document.querySelector('#next-player').innerHTML = player._name
 }
