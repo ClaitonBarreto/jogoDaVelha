@@ -8,7 +8,7 @@ var Player = {
         },
 
         getName: function(){
-            return this._value._name
+            return this._name
         },
 
         getScore: function(){

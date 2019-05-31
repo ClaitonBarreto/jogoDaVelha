@@ -10,10 +10,6 @@ function roundVerificator(val1, val2, val3) {
 		casas[val2].classList.add('green')
 		casas[val3].classList.add('green')
 		win(player)
-		player = {value: ''}
-		casas.forEach((casa) => {
-			casa.addEventListener('click', (e) => { return false })
-		})
 		winner = true;
 	} 
 }
