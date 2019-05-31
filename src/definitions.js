@@ -26,15 +26,15 @@ function defineValues()
 		defineMuralValue({
 			'#score-player-1' : player1._score,
 			'#score-player-2' : player2._score,
-			'#name-player-1' : player1._name,
-			'#name-player-2' : player2._name
+			'#name-player-1' : player1._name + " : " + player1._value,
+			'#name-player-2' : player2._name + " : " + player2._value
 		})
 	} else {
 		defineMuralValue({
 				'#score-player-1' : JSON.parse(sessionStorage.getItem('player1'))._score,
 				'#score-player-2' : JSON.parse(sessionStorage.getItem('player2'))._score,
-				'#name-player-1' : JSON.parse(sessionStorage.getItem('player1'))._name, 
-				'#name-player-2' : JSON.parse(sessionStorage.getItem('player2'))._name	
+				'#name-player-1' : JSON.parse(sessionStorage.getItem('player1'))._name + " : " + JSON.parse(sessionStorage.getItem('player1'))._value, 
+				'#name-player-2' : JSON.parse(sessionStorage.getItem('player2'))._name + " : " + JSON.parse(sessionStorage.getItem('player2'))._value	
 			})
 		player1 = JSON.parse(sessionStorage.getItem('player1'))
 		player2 = JSON.parse(sessionStorage.getItem('player2'))

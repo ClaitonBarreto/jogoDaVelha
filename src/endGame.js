@@ -12,6 +12,5 @@ function win(player) {
 function incrementScore(player) {
 
 	player._score += 1
-
 	sessionStorage.setItem(session, JSON.stringify(player))
 }

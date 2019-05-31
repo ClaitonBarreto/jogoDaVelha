@@ -7,7 +7,7 @@
  * 
  * Created at: 22/05/2019
  * 
- * Version: 0.0.1
+ * Version: 1.0
  */
 
 const 
@@ -67,7 +67,7 @@ function main()
 
 function restartGame() {
 	sessionStorage.clear()
-	window.setTimeout(() => {location.reload()}, 1000)
+	window.setTimeout(() => {location.reload()}, 500)
 }
 
 main()
